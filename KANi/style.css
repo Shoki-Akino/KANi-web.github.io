@@ -1,0 +1,656 @@
+html {
+    font-size: 100%; /* 16px */
+}
+
+body {
+    color: #24292e;
+    font-family: "Sawarabi Gothic";
+    overflow-x: hidden;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3rem; /* 16px*1.3=20.8px */
+    font-family: "Noto Sans JP";
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+::-webkit-scrollbar {
+    width: 15px
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f195;
+}
+::-webkit-scrollbar-thumb {
+    background: #2852b463;
+    border-radius: 10px;
+}
+
+.wrapper {
+    max-width: 960px;   
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+#salon-info {
+    max-width: 960px;
+}
+
+.site-title {
+    line-height: 1px;
+    font-weight: 600;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+}
+
+.site-title a {
+    color: #24292e;
+
+}
+
+.sec-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+/* header */
+#header {
+    position: fixed;
+/*     max-width: 1080px;
+ */ 
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20%;
+    height: 60px;
+    z-index: 999;
+    background: #46537683;
+    box-shadow: 0 2px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#header  h1 a{
+    color: #CDC499;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#header li {
+    font-size: 1rem;
+    margin-left: 30px;
+}
+
+#header ul li a {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#header ul li a:hover {
+    color: #CDC499;
+    opacity: 1;
+}
+
+#header li img.icon {
+    width: 30px;
+}
+
+/* main */
+#main {
+    margin-bottom: 80px;
+}
+
+#main .main-slide {
+    width: 100%;
+    height: 100vh;
+/*     object-fit: cover; */
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/main-slide1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+    z-index: 3;
+}
+
+@keyframes change {
+    0%{
+        background-image: url(img/main-slide1.png);
+    }
+    33%{
+        background-image: url(img/main-slide2.jpg);
+    }
+    66%{
+        background-image: url(img/main-slide3.jpg);
+    }
+    100%{
+        background-image: url(img/main-slide1.png);
+    }
+}
+
+/* .underber {
+    width: 100%;
+    height: 1vh;
+    border-bottom: 5px solid #9728B4;
+} */
+
+/* information */
+/* #information ul {
+    margin-bottom: 30px;
+}
+
+#information ul li {
+    margin-bottom: 3px;
+}
+
+#information ul li:first-child {
+    margin-bottom: 30px;
+}
+ */
+
+#information {
+    max-width: 1920px;
+}
+
+#information .flex {
+    display: flex;
+}
+
+.info-back {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/info-backjpg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: -600px;
+    
+    z-index: -1;
+}
+
+
+
+.snap-scroll {
+   scroll-snap-type: x mandatory;
+   display: flex;
+   overflow-x: auto;
+   gap: 1rem;
+   width: 780px;
+   height: 300px;
+   margin: 0 auto;
+   margin-left: 70px;
+   margin-right: 60px;
+   margin-top: 20px;
+}
+
+.snap-scroll::-webkit-scrollbar {
+    width: 12px
+}
+.snap-scroll::-webkit-scrollbar-track {
+    background: #f1f1f195;
+}
+.snap-scroll::-webkit-scrollbar-thumb {
+    background: #2852b463;
+    border-radius: 10px;
+}
+
+.item {
+   scroll-snap-align: start;
+   flex: 0 0 100%;
+   background-color: #aaa;
+   border-radius: 0.6rem;
+   padding: 20px 20px;
+}
+
+.item h5 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #5e5c5eae;
+}
+
+.item p {
+    font-size: 1.0rem;
+}
+
+.text {
+    padding-top: 60px;
+    padding: 1% 1%;
+}
+
+.text p {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+  
+/* other styles */
+  
+.item:nth-child(1) {
+    background: rgba(196, 196, 196, 0.632);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.item:nth-child(2) {
+    background: rgba(196, 196, 196, 0.632);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.item:nth-child(3) {
+    background: rgba(196, 196, 196, 0.632);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.item:nth-child(4) {
+    background: rgba(196, 196, 196, 0.632);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.item:nth-child(5) {
+    background: rgba(196, 196, 196, 0.632);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 3px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.text {
+    width: 680px;
+    margin-right: 70px;
+    border-left: 2px solid #5d5d5d;
+}
+
+/* salon-info */
+#salon-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#salon-info ul li {
+    width: 31%;
+    margin-bottom: 23px;
+    margin-left: 10px;
+}
+
+#salon-info ul li img {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#salon-info ul li img:hover {
+    transform: scale(1.2, 1.2);
+    opacity: 0.7;
+}
+
+#salon-info .info {
+    margin-bottom: 60px;
+}
+
+#salon-info .info h3 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+#salon-info .info p {
+    margin-bottom: 4px;
+}
+
+/* menu */
+.menu-back1 {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/menu-back1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: -400px;
+    margin-top: 200px;
+    z-index: -1;
+}
+
+.menu-back1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* ぼかす色と透明度を設定 */
+    backdrop-filter: blur(10px); /* ぼかしの半径を設定 */
+    z-index: -1; /* 背景の下に配置 */
+}
+
+.menu-back2 {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/menu-back2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: -850px;
+    margin-top: 450px;
+    z-index: -2;
+}
+
+.menu-back2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* ぼかす色と透明度を設定 */
+    backdrop-filter: blur(10px); /* ぼかしの半径を設定 */
+    z-index: -1; /* 背景の下に配置 */
+}
+
+.menu-back3 {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/menu-back3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: -1200px;
+    margin-top: 900px;
+    z-index: -3;
+}
+
+.menu-back3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* ぼかす色と透明度を設定 */
+    backdrop-filter: blur(10px); /* ぼかしの半径を設定 */
+    z-index: -1; /* 背景の下に配置 */
+}
+
+#menu p {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+#menu dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 3px solid #c8c8c8;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#menu dt {
+    width: 30%;
+    border-bottom: 3px solid #c8c8c8;
+    padding: 15px;
+    font-weight: 500;
+}
+
+#menu dd {
+    width: 70%;
+    border-bottom: 3px solid #c8c8c8;
+    padding: 15px;
+    font-weight: 500;
+}
+
+
+.last-back {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: url(img/last.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-top: -200px;
+    z-index: -1;
+}
+
+/* sp */
+@media screen and (max-width: 600px) {
+    .site-title {
+        margin-top: 20px;
+    } 
+
+    /* main */
+    #main .main-slide {
+        width: 100%;
+        height: 300px;
+/*     object-fit: cover; */
+       overflow: hidden;
+       position: relative;
+       background-image: url(img/main-slide1.png);
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       justify-content: center;
+       animation: change 10s infinite ease-in-out;
+       z-index: 3;
+    }
+
+    @keyframes change {
+        0%{
+            background-image: url(img/main-slide1.png);
+        }
+        33%{
+            background-image: url(img/main-slide2.png);
+        }
+        66%{
+            background-image: url(img/main-slide3.png);
+        }
+        100%{
+            background-image: url(img/main-slide1.png);
+        }
+    }
+
+    /* header */
+    #header {
+        position: initial;
+        flex-direction: column;
+        height: auto;
+        line-height: 40px;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    #header li {
+        font-size: 1.2rem;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    /* informtion */
+    #information {
+        max-width: 660px;
+    }
+    
+    #information .flex {
+        display: contents;
+    }
+    
+    .snap-scroll {
+       scroll-snap-type: x mandatory;
+       display: flex;
+       overflow-x: auto;
+       gap: 1rem;
+       width: 100%;
+       height: 300px;
+       margin: 0 auto;
+       margin-bottom: 60px;
+    }
+    
+    .item {
+       scroll-snap-align: start;
+       flex: 0 0 100%;
+       background-color: #aaa;
+       border-radius: 0.6rem;
+    }
+
+    .item h5 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .item p {
+        font-size: 0.8rem;
+    }
+
+    .text {
+        border-left: none;
+    }
+      
+    /* other styles */
+      
+    .item:nth-child(1) {
+        background: rgba(196, 196, 196, 0.632);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 3px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .item:nth-child(2) {
+        background: rgba(196, 196, 196, 0.632);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 3px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .item:nth-child(3) {
+        background: rgba(196, 196, 196, 0.632);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 3px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .item:nth-child(4) {
+        background: rgba(196, 196, 196, 0.632);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 3px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .item:nth-child(5) {
+        background: rgba(196, 196, 196, 0.632);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 10px;
+        border: 3px solid rgba( 255, 255, 255, 0.18 );
+    }
+    
+    .text {
+        width: 90%;
+        align-items: center;
+    }
+    
+
+    /* salon-info */
+    #salon-info ul {
+        flex-direction: column;
+    } 
+
+    #salon-info ul li {
+        width: 100%;
+    }
+
+    #salon-info .info p {
+        margin-bottom: 4px;
+        font-size: 0.8rem;
+    }
+
+    /* menu */
+    #menu dl {
+        flex-direction: column;
+    }
+
+    #menu dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #menu dd {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .last-back {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        overflow: hidden;
+        position: relative;
+        background-image: url(img/last.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        margin-top: -150px;
+        z-index: -1;
+    }
+}
